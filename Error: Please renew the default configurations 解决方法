@@ -1,0 +1,16 @@
+比如我把配置配错接口了，需要删掉端口的配置
+
+  interface GigabitEthernet0/0/1
+   port link-type trunk
+   undo port trunk allow-pass vlan 1
+   port trunk allow-pass vlan 2 to 4094
+  interface GigabitEthernet0/0/1
+  undo port link-type trunk
+Error: Please renew the default configurations.
+
+需要一层一层的来删除配置，直到恢复到默认的配置，就不再报错误了。正确的删掉命令方式为：
+
+  interface GigabitEthernet0/0/1
+  undo port trunk allow-pass vlan all
+  port trunk allow-pass vlan 1
+  undo port link-type
