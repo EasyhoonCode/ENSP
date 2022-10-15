@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UNICODE" ?>
+<topo version="1.3.00.100">
+    <devices>
+        <dev id="506A24B6-4CC7-42df-9ABF-4E5178417852" name="PC1" poe="0" model="PC" settings=" -simpc_ip 192.168.10.10  -simpc_mask 255.255.255.0  -simpc_gateway 192.168.10.1  -simpc_mac 54-89-98-28-47-0B  -simpc_mc_dstip 0.0.0.0  -simpc_mc_dstmac 00-00-00-00-00-00  -simpc_dns1 0.0.0.0  -simpc_dns2 0.0.0.0  -simpc_ipv6 ::  -simpc_prefix 128  -simpc_gatewayv6 ::  -simpc_dhcp_state 0  -simpc_dhcpv6_state 0  -simpc_dns_auto_state 0  -simpc_igmp_version 1  -simpc_group_ip_start 0.0.0.0  -simpc_src_ip_start 0.0.0.0  -simpc_group_num 0  -simpc_group_step 0  -simpc_src_num 0  -simpc_src_step 0  -simpc_type MODE_IS_INCLUDE " system_mac="54-89-98-28-47-0B" com_port="0" bootmode="0" cx="137.000000" cy="794.000000" edit_left="164" edit_top="848">
+            <slot number="slot17" isMainBoard="1">
+                <interface sztype="Ethernet" interfacename="Ethernet" count="1" />
+            </slot>
+        </dev>
+        <dev id="64CF079C-5F92-4a8d-8590-992717536057" name="PC2" poe="0" model="PC" settings=" -simpc_ip 192.168.20.10  -simpc_mask 255.255.255.0  -simpc_gateway 192.168.20.1  -simpc_mac 54-89-98-EE-1E-01  -simpc_mc_dstip 0.0.0.0  -simpc_mc_dstmac 00-00-00-00-00-00  -simpc_dns1 0.0.0.0  -simpc_dns2 0.0.0.0  -simpc_ipv6 ::  -simpc_prefix 128  -simpc_gatewayv6 ::  -simpc_dhcp_state 0  -simpc_dhcpv6_state 0  -simpc_dns_auto_state 0  -simpc_igmp_version 1  -simpc_group_ip_start 0.0.0.0  -simpc_src_ip_start 0.0.0.0  -simpc_group_num 0  -simpc_group_step 0  -simpc_src_num 0  -simpc_src_step 0  -simpc_type MODE_IS_INCLUDE " system_mac="54-89-98-EE-1E-01" com_port="0" bootmode="0" cx="446.000000" cy="798.000000" edit_left="473" edit_top="852">
+            <slot number="slot17" isMainBoard="1">
+                <interface sztype="Ethernet" interfacename="Ethernet" count="1" />
+            </slot>
+        </dev>
+        <dev id="6EF4329B-90AF-4701-9FEE-F3442C1A3C76" name="AR1" poe="0" model="AR1220" settings="" system_mac="00-E0-FC-16-77-56" com_port="2000" bootmode="0" cx="269.000000" cy="396.000000" edit_left="296" edit_top="450">
+            <slot number="slot17" isMainBoard="1">
+                <interface sztype="Ethernet" interfacename="GE" count="2" />
+                <interface sztype="Ethernet" interfacename="Ethernet" count="8" />
+            </slot>
+        </dev>
+        <dev id="73DD630F-0F28-4ecd-BC2F-0BF4F5182644" name="LSW1" poe="0" model="S3700" settings="" system_mac="4C-1F-CC-52-40-D8" com_port="2001" bootmode="0" cx="270.000000" cy="590.000000" edit_left="300" edit_top="644">
+            <slot number="slot17" isMainBoard="1">
+                <interface sztype="Ethernet" interfacename="Ethernet" count="22" />
+                <interface sztype="Ethernet" interfacename="GE" count="2" />
+            </slot>
+        </dev>
+    </devices>
+    <lines>
+        <line srcDeviceID="6EF4329B-90AF-4701-9FEE-F3442C1A3C76" destDeviceID="73DD630F-0F28-4ecd-BC2F-0BF4F5182644">
+            <interfacePair lineName="Copper" srcIndex="0" srcBoundRectIsMoved="0" srcBoundRect_X="296.222595" srcBoundRect_Y="466.183197" srcOffset_X="0.000000" srcOffset_Y="0.000000" tarIndex="2" tarBoundRectIsMoved="0" tarBoundRect_X="296.777405" tarBoundRect_Y="573.816833" tarOffset_X="0.000000" tarOffset_Y="0.000000" />
+        </line>
+        <line srcDeviceID="73DD630F-0F28-4ecd-BC2F-0BF4F5182644" destDeviceID="64CF079C-5F92-4a8d-8590-992717536057">
+            <interfacePair lineName="Copper" srcIndex="1" srcBoundRectIsMoved="1" srcBoundRect_X="324.894226" srcBoundRect_Y="649.965881" srcOffset_X="7.000000" srcOffset_Y="-9.000000" tarIndex="0" tarBoundRectIsMoved="1" tarBoundRect_X="445.105774" tarBoundRect_Y="792.034119" tarOffset_X="1.000000" tarOffset_Y="-18.000000" />
+        </line>
+        <line srcDeviceID="73DD630F-0F28-4ecd-BC2F-0BF4F5182644" destDeviceID="506A24B6-4CC7-42df-9ABF-4E5178417852">
+            <interfacePair lineName="Copper" srcIndex="0" srcBoundRectIsMoved="1" srcBoundRect_X="273.415497" srcBoundRect_Y="653.174683" srcOffset_X="-78.000000" srcOffset_Y="-5.000000" tarIndex="0" tarBoundRectIsMoved="1" tarBoundRect_X="187.584488" tarBoundRect_Y="784.825317" tarOffset_X="-80.000000" tarOffset_Y="-8.000000" />
+        </line>
+    </lines>
+    <shapes />
+    <txttips>
+        <txttip left="103" top="874" right="205" bottom="891" content="192.168.10.10" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="429" top="883" right="531" bottom="900" content="192.168.20.10" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="141" top="699" right="198" bottom="716" content="VLAN 10" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="402" top="704" right="459" bottom="721" content="VLAN 20" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="359" top="420" right="454" bottom="437" content="192.168.10.1" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="360" top="452" right="455" bottom="469" content="192.168.20.1" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="11" top="411" right="264" bottom="428" content="interface GigabitEthernet 0/0/0.1" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="10" top="434" right="263" bottom="451" content="interface GigabitEthernet 0/0/0.2" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="614" top="397" right="1131" bottom="820" content="AR1：&#x0D;&#x0A;interface GigabitEthernet0/0/0.1  //在子接口下配置&#x0D;&#x0A; dot1q termination vid 10   //封装为dot1q，子接口对应vlan10&#x0D;&#x0A; ip address 192.168.10.1 255.255.255.0  //配置VLAN10的网关&#x0D;&#x0A; arp broadcast enable  //开启ARP广播 &#x0D;&#x0A;&#x0D;&#x0A;interface GigabitEthernet0/0/0.2  //在子接口下配置&#x0D;&#x0A; dot1q termination vid 20   //封装为dot1q，子接口对应vlan20&#x0D;&#x0A; ip address 192.168.20.1 255.255.255.0  //配置VLAN20的网关&#x0D;&#x0A; arp broadcast enable  //开启ARP广播&#x0D;&#x0A;&#x0D;&#x0A;LSW1：   &#x0D;&#x0A;&#x0D;&#x0A;vlan batch 10 20  //创建vlan10、20&#x0D;&#x0A;interface GigabitEthernet0/0/1&#x0D;&#x0A; port link-type trunk   //接路由器的端口设为trunk&#x0D;&#x0A; port trunk allow-pass vlan 2 to 4094    //允许所有VLAN通过  2至4094&#x0D;&#x0A;&#x0D;&#x0A;&#x0D;&#x0A;interface GigabitEthernet0/0/2&#x0D;&#x0A; port link-type access  //接路由器的端口设为access&#x0D;&#x0A; port default vlan 10   //将端口划分到VLAN10&#x0D;&#x0A;interface GigabitEthernet0/0/3&#x0D;&#x0A; port link-type access  //接路由器的端口设为access&#x0D;&#x0A; port default vlan 20   //将端口划分到VLAN20&#x0D;&#x0A; &#x0D;&#x0A;" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+    </txttips>
+</topo>
