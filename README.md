@@ -88,6 +88,7 @@
     (四)查看配置情况
     [Huawei]dislay vlan ID号
     [Huawei]display current-configuration 显示当前配置
+    [Huawei]display port vlan        //查看接口VLAN状态
    
    # 八、交换机端口工作模式
     (一)Access模式(接入模式)
