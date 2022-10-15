@@ -10,7 +10,13 @@ Error: Please renew the default configurations.
 
 需要一层一层的来删除配置，直到恢复到默认的配置，就不再报错误了。正确的删掉命令方式为：
 
+第一种方法：
+
   interface GigabitEthernet0/0/1
   undo port trunk allow-pass vlan all
   port trunk allow-pass vlan 1
   undo port link-type
+
+第二种方法：
+
+在交换机视图模式下，使用 clear configuration interface GigabitEthernet 0/0/x，清除端口所有配置，然后再重新配置即可！
